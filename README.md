@@ -1,4 +1,4 @@
-# <center> [사람인](https://www.saramin.co.kr/) 채용공고 크롤링 </center>
+# [사람인](https://www.saramin.co.kr/) 채용공고 크롤링
 > [www.saramin.co.kr](www.saramin.co.kr) 사이트에서 검색된 채용 공고의 정보 수집
 
 [![saramin_img](https://github.com/sessac-gcpAI-1st/saramin-repo-1/assets/97524127/60cd28c0-5789-4f5c-8597-bfe74f1099ec)](https://www.saramin.co.kr/)
@@ -34,9 +34,7 @@
 
    - Chrome 버전 확인: 
 
-        주소창에 `chrome://version` 혹은
-    
-        `chrome 창 우상단 점 3개 > 도움말 > Chrome 정보`
+        주소창에 `chrome://version` 혹은 `chrome 창 우상단 점 3개 > 도움말 > Chrome 정보`
 
     - [Chrome 버전에 맞는 driver 다운로드](https://chromedriver.chromium.org/downloads)
     
