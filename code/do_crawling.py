@@ -89,9 +89,9 @@ def collect_data(driver, data, title_list):
                     val_lst = list(list(zip_longest(*cond_list))[i])
                     push_data(data, cond_str_list[i], val_lst)
                 except Exception as e:
-                    if i == 4: print('예외 발생: 현재 페이지에 급여 정보 없음')
-                    else: print('예외 발생:', e)
                     push_data(data, cond_str_list[i], [None]*len(val_lst))
+                    if i == 4: continue    # print('예외 발생: 현재 페이지에 급여 정보 없음')
+                    else: print('예외 발생:', e)
         
         # href 추출
         elif k == "링크":
@@ -110,6 +110,7 @@ def crawling(driver, data, title_list):
     """
     페이지를 넘겨가며 데이터 수집
     """
+    start = time.time()
 
     is_done = False
 
@@ -121,7 +122,9 @@ def crawling(driver, data, title_list):
         # 다음 페이지로 이동
         is_done = move_next(driver)
 
-    print("************\n크롤링 완료!\n************")
+    end = time.time()
+
+    print(f"*************************\n모든 페이지 크롤링 완료!\n걸린 시간: {end - start:.1f}초\n*************************\n")
 
 
 
